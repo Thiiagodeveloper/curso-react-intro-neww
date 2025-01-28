@@ -15,7 +15,7 @@ const defualtTodos = [
 
 function App() {
   return (
-    <React.Fragment>
+    <>
 
       <TodoCounter completed={15} total={25}/>
       <TodoSearch />
@@ -32,7 +32,7 @@ function App() {
 
       <CreateTodoButton />
 
-      </React.Fragment>
+      </>
   );
 
 }
