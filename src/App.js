@@ -6,11 +6,11 @@ import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 
-const defualtTodos = [
-  {text: 'Cortar Cebolla', completed: true },
-  {text: 'Curso de JS', completed: false },
-  {text: 'Curso de Html', completed: false },
-  {text: 'Curso de backend', completed: true }
+const defaultTodos = [
+  {text: 'Cut Onion', completed: true },
+  {text: 'Course JS', completed: false },
+  {text: 'Course Html', completed: false },
+  {text: 'Course backend', completed: true }
 ]
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <TodoSearch />
 
       <TodoList>
-          {defualtTodos.map(todo =>(
+          {defaultTodos.map(todo =>(
             <TodoItem
             key ={todo.text}
             text={todo.text}
