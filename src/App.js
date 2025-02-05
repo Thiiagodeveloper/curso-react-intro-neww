@@ -10,15 +10,26 @@ const defaultTodos = [
   {text: 'Cut Onion', completed: true },
   {text: 'Course JS', completed: false },
   {text: 'Course Html', completed: false },
-  {text: 'Course backend', completed: true }
+  {text: 'Course backend', completed: true },
+  {text: 'Course Angular', completed: true }
 ]
 
 function App() {
-  return (
-    <>
 
-      <TodoCounter completed={15} total={25}/>
-      <TodoSearch />
+  const [todos,setTodos] = React.useState(defaultTodos);
+  const [searchValue, setSearchValue ] = React.useState('');
+
+  const completedTodo = todos.filter(todo => !!todo.completed).length
+  console.log(completedTodo);
+  const totalTodos = defaultTodos.length;
+  
+  // let totalTodos = 0;
+  console.log('Hi, you are writing ' + searchValue);
+
+  return (
+    <>  
+      <TodoCounter completed={completedTodo} total={totalTodos}/>
+      <TodoSearch searchValue = {searchValue} setSearchValue = {setSearchValue}  />
 
       <TodoList>
           {defaultTodos.map(todo =>(
